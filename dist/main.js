@@ -1,5 +1,5 @@
 // map class initialize 
-var map = L.map('map').setView([38.8610, 71.2761], 7);
+var map = L.map('map').setView([18.8610, 73.2761], 10);
 map.zoomControl.setPosition('topright');
 
 // adding osm tilelayer 
@@ -57,8 +57,8 @@ var baseMaps = {
 }
 
 var overlayMaps = {
-    'GeoJSON Markers': marker,
+    'Panvel Railway': marker,
     'Single Marker': singleMarker
 }
 
-L.control.layers(baseMaps, overlayMaps, { collapsed: false, position: 'topleft' }).addTo(map);
+L.control.layers(baseMaps, overlayMaps, { collapsed: true, position: 'topleft' }).addTo(map);

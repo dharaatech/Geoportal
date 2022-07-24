@@ -1,5 +1,4 @@
-var data = {
- 
+{
 "type": "FeatureCollection",
 "name": "Railway_Network",
 "features": [
@@ -98,4 +97,3 @@ var data = {
 { "type": "Feature", "properties": { "OBJECTID": 95, "GM_LAYER": "railway - rail", "GM_TYPE": "Railroad, Class 1A", "version": 1, "railway": "rail", "id": 661778965, "bridge": null, "constructi": null, "electrifie": null, "gauge": 1676, "layer": 0, "name": null, "usage": null, "voltage": 25000, "tracks": 0, "tunnel": null, "type": null, "passenger_": 0, "service": "crossover", "frequency": 0, "highspeed": null, "maxspeed": 0, "note": null, "wikipedia": null, "name_mr": null, "source": null, "oneway": null, "date_start": 0, "level": 0, "monorail": null, "public_tra": null, "ref": 0, "train": null, "subway": null, "proposed": null, "cutting": null, "source_bri": null, "start_date": null, "covered": null, "Shape_Leng": 0.00044608977309299998 }, "geometry": { "type": "LineString", "coordinates": [ [ 73.126152399913394, 18.986466699578557 ], [ 73.125869000154296, 18.986811200176817 ] ] } }
 ]
 }
-
