@@ -62,7 +62,7 @@ var baseMaps = {
 
 var overlayMaps = {
     'Panvel Railway': marker,
-    'Single Marker': singleMarker
+    'may 2019': may2019
 }
 
 L.control.layers(baseMaps, overlayMaps, { collapsed: true, position: 'topleft' }).addTo(map);
