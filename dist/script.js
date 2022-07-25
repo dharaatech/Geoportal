@@ -1,5 +1,5 @@
 // map class initialize 
-var map = L.map('map').setView([18.9894, 73.1175], 1);
+var map = L.map('map').setView([18.8610, 73.2761], 10);
 map.zoomControl.setPosition('topright');
 
 // adding osm tilelayer 
@@ -24,7 +24,7 @@ var st = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y
 });
 
 //Addming marker in the center of map
-var singleMarker = L.marker([19.0610, 73.2761])
+var singleMarker = L.marker([38.8610, 71.2761])
     .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
     .openPopup();
 
@@ -48,7 +48,11 @@ var taji = L.geoJSON(data, {
 taji.addTo(marker);
 marker.addTo(map);
 
-
+var may2019 =L.geoJSON(maydata, {
+    onEachFeature: function (feature, layer) {
+        layer.bindPopup(feature.properties.name)
+    }
+});
 //Leaflet layer control
 var baseMaps = {
     'OSM': osm,
@@ -57,8 +61,8 @@ var baseMaps = {
 }
 
 var overlayMaps = {
-    'GeoJSON Markers': marker,
-    'Single Marker': singleMarker
+    'Panvel Railway': marker,
+    'may 2019': may2019
 }
 
-L.control.layers(baseMaps, overlayMaps, { collapsed: false, position: 'topleft' }).addTo(map);
+L.control.layers(baseMaps, overlayMaps, { collapsed: true, position: 'topleft' }).addTo(map);
