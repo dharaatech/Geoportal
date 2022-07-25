@@ -48,7 +48,11 @@ var taji = L.geoJSON(data, {
 taji.addTo(marker);
 marker.addTo(map);
 
-
+var may2019 =L.geoJSON(maydata, {
+    onEachFeature: function (feature, layer) {
+        layer.bindPopup(feature.properties.name)
+    }
+});
 //Leaflet layer control
 var baseMaps = {
     'OSM': osm,
